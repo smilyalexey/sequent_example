@@ -5,8 +5,8 @@ Rails.application.reloader.to_prepare do
     config.migrations_class_name = 'SequentMigrations'
    
     config.command_handlers = [
-      # add you Sequent::CommandHandler's here
-    ]
+      User::UserCommandHandler
+    ].map(&:new)
    
     config.event_handlers = [
       # add you Sequent::Projector's or Sequent::Workflow's here
