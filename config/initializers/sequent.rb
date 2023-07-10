@@ -9,7 +9,7 @@ Rails.application.reloader.to_prepare do
     ].map(&:new)
    
     config.event_handlers = [
-      # add you Sequent::Projector's or Sequent::Workflow's here
+      UserProjector.new,
     ]
 
     config.database_config_directory = 'config'
